@@ -51,7 +51,7 @@ class CodeFormatter {
 
   formatCode = async (
     code,
-    { removeUnusedImports = true, prettierFormat = true } = {},
+    { removeUnusedImports = false, prettierFormat = false } = {},
   ) => {
     if (removeUnusedImports) {
       code = this.removeUnusedImports(code);

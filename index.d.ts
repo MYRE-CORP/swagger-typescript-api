@@ -174,7 +174,7 @@ interface GenerateApiParamsBase {
   extractingOptions?: Partial<ExtractingOptions>;
 
   /** configuration for fetching swagger schema requests */
-  requestOptions?: null | Partial<import("node-fetch").RequestInit>;
+  requestOptions?: null | Partial<RequestInit>;
 
   /** ts compiler configuration object (for --to-js option) */
   compilerTsConfig?: Record<string, any>;
@@ -293,7 +293,7 @@ interface GenerateApiParamsFromSpecLiteral extends GenerateApiParamsBase {
   /**
    * swagger schema JSON
    */
-  spec: import("swagger-schema-official").Spec;
+  spec: any;
 }
 
 export type GenerateApiParams = GenerateApiParamsFromPath | GenerateApiParamsFromUrl | GenerateApiParamsFromSpecLiteral;
@@ -608,7 +608,7 @@ export interface GenerateApiConfiguration {
     };
     routeNameDuplicatesMap: Map<string, string>;
     apiClassName: string;
-    requestOptions?: import("node-fetch").RequestInit;
+    requestOptions?: RequestInit;
     extractingOptions: ExtractingOptions;
   };
   modelTypes: ModelType[];
@@ -623,7 +623,7 @@ export interface GenerateApiConfiguration {
       routes: ParsedRoute[];
     }[];
   };
-  requestOptions?: null | Partial<import("node-fetch").RequestInit>;
+  requestOptions?: null | Partial<RequestInit>;
   utils: {
     formatDescription: (description: string, inline?: boolean) => string;
     internalCase: (value: string) => string;
@@ -642,7 +642,7 @@ export interface GenerateApiConfiguration {
     inlineExtraFormatters: Record<Exclude<MAIN_SCHEMA_TYPES, SCHEMA_TYPES.PRIMITIVE>, (schema: ModelType) => string>;
     formatModelName: (name: string) => string;
     fmtToJSDocLine: (line: string, params?: { eol?: boolean }) => string;
-    _: import("lodash").LoDashStatic;
+    _: any;
     require: (path: string) => unknown;
   };
 }
@@ -663,7 +663,7 @@ export interface GenerateApiOutput {
   renderTemplate: (
     templateContent: string,
     data: Record<string, unknown>,
-    etaOptions?: import("eta/dist/types/config").PartialConfig,
+    etaOptions?: any,
   ) => string;
   getTemplate: (params: { fileName?: string; name?: string; path?: string }) => string;
   formatTSContent: (content: string) => Promise<string>;

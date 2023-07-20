@@ -1,4 +1,4 @@
-import {MonoSchemaParser} from "./src/schema-parser/mono-schema-parser";
+// import {MonoSchemaParser} from "./src/schema-parser/mono-schema-parser";
 
 type HttpClientType = "axios" | "fetch";
 
@@ -213,16 +213,16 @@ interface GenerateApiParamsBase {
   /** fallback name for specific arg name resolver */
   specificArgNameResolverName?: string;
   schemaParsers?: {
-    complexOneOf?:MonoSchemaParser;
-    complexAllOf?:MonoSchemaParser;
-    complexAnyOf?:MonoSchemaParser;
-    complexNot?:MonoSchemaParser;
-    enum?:MonoSchemaParser;
-    object?:MonoSchemaParser;
-    complex?:MonoSchemaParser;
-    primitive?:MonoSchemaParser;
-    discriminator?:MonoSchemaParser;
-    array?: MonoSchemaParser;
+    // complexOneOf?:MonoSchemaParser;
+    // complexAllOf?:MonoSchemaParser;
+    // complexAnyOf?:MonoSchemaParser;
+    // complexNot?:MonoSchemaParser;
+    // enum?:MonoSchemaParser;
+    // object?:MonoSchemaParser;
+    // complex?:MonoSchemaParser;
+    // primitive?:MonoSchemaParser;
+    // discriminator?:MonoSchemaParser;
+    // array?: MonoSchemaParser;
   }
 }
 
